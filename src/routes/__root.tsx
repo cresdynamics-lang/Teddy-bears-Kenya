@@ -6,18 +6,16 @@ import { Link } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
-    <Layout>
-      <div className="min-h-[60vh] grid place-items-center px-4 text-center">
-        <div>
-          <p className="font-display text-7xl font-bold text-primary">404</p>
-          <h1 className="mt-3 font-display text-2xl">This bear has wandered off</h1>
-          <p className="mt-2 text-muted-foreground">The page you're looking for doesn't exist.</p>
-          <Link to="/" className="mt-6 inline-flex rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90">
-            Take me home
-          </Link>
-        </div>
+    <div className="min-h-[60vh] grid place-items-center px-4 text-center">
+      <div>
+        <p className="font-display text-7xl font-bold text-primary">404</p>
+        <h1 className="mt-3 font-display text-2xl">This bear has wandered off</h1>
+        <p className="mt-2 text-muted-foreground">The page you're looking for doesn't exist.</p>
+        <Link to="/" className="mt-6 inline-flex rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90">
+          Take me home
+        </Link>
       </div>
-    </Layout>
+    </div>
   );
 }
 
