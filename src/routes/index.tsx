@@ -60,7 +60,7 @@ function Home() {
           <div className="relative">
             <div className="relative animate-float">
               <img
-                src="https://images.unsplash.com/photo-1608043152266-33a8b8d67997?auto=format&fit=crop&w=900&q=80"
+                src={heroBears}
                 alt="Pile of adorable teddy bears"
                 className="w-full aspect-square object-cover rounded-[2.5rem] shadow-glow"
               />
@@ -125,7 +125,7 @@ function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-24">
         <div className="grid lg:grid-cols-2 gap-10 items-center bg-card rounded-[2.5rem] p-8 sm:p-12 shadow-soft">
           <img
-            src="https://images.unsplash.com/photo-1581012184459-48ba1d4f8c2c?auto=format&fit=crop&w=900&q=80"
+            src={aboutBears}
             alt="A cozy bear"
             className="rounded-3xl aspect-[4/3] object-cover w-full"
           />
