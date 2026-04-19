@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Heart, Truck, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import aboutBears from "@/assets/about-bears.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -38,7 +39,7 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <img
-          src="https://images.unsplash.com/photo-1535850579807-46cb09f63d2c?auto=format&fit=crop&w=900&q=80"
+          src={aboutBears}
           alt="Two teddies on a windowsill"
           className="rounded-[2.5rem] aspect-[4/5] object-cover w-full shadow-soft"
         />
