@@ -1,3 +1,10 @@
+import bearSweetie from "@/assets/bear-sweetie.jpg";
+import bearHuggy from "@/assets/bear-huggy.jpg";
+import bearKing from "@/assets/bear-king.jpg";
+import bearPersonalized from "@/assets/bear-personalized.jpg";
+import bearValentine from "@/assets/bear-valentine.jpg";
+import bearBaby from "@/assets/bear-baby.jpg";
+
 export type Category = "Small" | "Medium" | "Giant" | "Personalized" | "Gift Sets";
 
 export interface Product {
@@ -12,7 +19,6 @@ export interface Product {
   rating: number;
 }
 
-// Unsplash teddy/plush images
 export const products: Product[] = [
   {
     id: "sweetie-bear",
@@ -21,7 +27,7 @@ export const products: Product[] = [
     category: "Small",
     size: "Small",
     occasion: ["Birthday", "Just Because"],
-    image: "https://images.unsplash.com/photo-1559454403-b8fb88521f00?auto=format&fit=crop&w=900&q=80",
+    image: bearSweetie,
     description: "A pocket-sized pink cuddle, perfect for sweet little surprises.",
     rating: 5,
   },
@@ -32,7 +38,7 @@ export const products: Product[] = [
     category: "Medium",
     size: "Medium",
     occasion: ["Anniversary", "Birthday"],
-    image: "https://images.unsplash.com/photo-1530712606469-c39c1f7d62cd?auto=format&fit=crop&w=900&q=80",
+    image: bearHuggy,
     description: "A soft baby-blue bear holding a tiny embroidered heart.",
     rating: 5,
   },
@@ -43,7 +49,7 @@ export const products: Product[] = [
     category: "Giant",
     size: "Giant",
     occasion: ["Anniversary", "Surprise"],
-    image: "https://images.unsplash.com/photo-1584155828260-3f126cd6e7d3?auto=format&fit=crop&w=900&q=80",
+    image: bearKing,
     description: "A 1-metre brown giant — the hug that never lets go.",
     rating: 5,
   },
@@ -54,7 +60,7 @@ export const products: Product[] = [
     category: "Personalized",
     size: "Medium",
     occasion: ["Baby Shower", "Birthday"],
-    image: "https://images.unsplash.com/photo-1558877385-81a1c7e67d72?auto=format&fit=crop&w=900&q=80",
+    image: bearPersonalized,
     description: "Custom embroidered name on a plush cream bear. Truly one-of-a-kind.",
     rating: 5,
   },
@@ -65,8 +71,8 @@ export const products: Product[] = [
     category: "Gift Sets",
     size: "Medium",
     occasion: ["Valentines", "Anniversary"],
-    image: "https://images.unsplash.com/photo-1612870398040-d23c1a4ed9d3?auto=format&fit=crop&w=900&q=80",
-    description: "Two darling bears clutching velvet hearts — a love story in plush.",
+    image: bearValentine,
+    description: "Two darling bears clutching a velvet heart — a love story in plush.",
     rating: 5,
   },
   {
@@ -76,18 +82,18 @@ export const products: Product[] = [
     category: "Small",
     size: "Small",
     occasion: ["Baby Shower", "Newborn"],
-    image: "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?auto=format&fit=crop&w=900&q=80",
+    image: bearBaby,
     description: "Tiny, hypoallergenic and impossibly soft. The very first cuddle.",
     rating: 5,
   },
 ];
 
 export const categories: { name: Category; blurb: string; image: string }[] = [
-  { name: "Small", blurb: "Pocket-sized hugs", image: "https://images.unsplash.com/photo-1559454403-b8fb88521f00?auto=format&fit=crop&w=600&q=80" },
-  { name: "Medium", blurb: "Just-right cuddles", image: "https://images.unsplash.com/photo-1530712606469-c39c1f7d62cd?auto=format&fit=crop&w=600&q=80" },
-  { name: "Giant", blurb: "Bear hugs, literally", image: "https://images.unsplash.com/photo-1584155828260-3f126cd6e7d3?auto=format&fit=crop&w=600&q=80" },
-  { name: "Personalized", blurb: "Add a name", image: "https://images.unsplash.com/photo-1558877385-81a1c7e67d72?auto=format&fit=crop&w=600&q=80" },
-  { name: "Gift Sets", blurb: "Bundles of love", image: "https://images.unsplash.com/photo-1612870398040-d23c1a4ed9d3?auto=format&fit=crop&w=600&q=80" },
+  { name: "Small", blurb: "Pocket-sized hugs", image: bearSweetie },
+  { name: "Medium", blurb: "Just-right cuddles", image: bearHuggy },
+  { name: "Giant", blurb: "Bear hugs, literally", image: bearKing },
+  { name: "Personalized", blurb: "Add a name", image: bearPersonalized },
+  { name: "Gift Sets", blurb: "Bundles of love", image: bearValentine },
 ];
 
 export const formatKsh = (n: number) => `KSh ${n.toLocaleString("en-KE")}`;
