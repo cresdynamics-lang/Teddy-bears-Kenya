@@ -5,6 +5,8 @@ import { Reviews } from "@/components/Reviews";
 import { Newsletter } from "@/components/Newsletter";
 import { products, categories } from "@/lib/products";
 import { ArrowRight, Truck, ShieldCheck, Sparkles, Heart } from "lucide-react";
+import heroBears from "@/assets/hero-bears.jpg";
+import aboutBears from "@/assets/about-bears.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
