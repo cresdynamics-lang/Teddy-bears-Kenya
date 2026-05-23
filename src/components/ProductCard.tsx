@@ -26,9 +26,6 @@ export function ProductCard({ product }: { product: Product }) {
           >
             <Eye className="w-4 h-4" />
           </button>
-          <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] font-semibold uppercase tracking-wide">
-            {product.category}
-          </span>
         </div>
         <div className="p-4">
           <div className="flex items-center gap-0.5 text-honey">
@@ -47,10 +44,6 @@ export function ProductCard({ product }: { product: Product }) {
             >
               <ShoppingBag className="w-4 h-4" /> Add
             </Button>
-          </div>
-          <div className="mt-2 flex gap-1.5">
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-muted">M-Pesa</span>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-muted">Pay Now</span>
           </div>
         </div>
       </article>

@@ -9,7 +9,12 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "fetch-images": "node scripts/download-teddy-images.mjs",
+    "fetch-haven-images": "node scripts/download-haven-images.mjs",
+    "fetch-amazon-images": "node scripts/download-amazon-images.mjs 41",
+    "fetch-kavsi-images": "node scripts/download-kavsi-images.mjs",
+    "fetch-all-images": "node scripts/download-haven-images.mjs && node scripts/download-teddy-images.mjs 12 29 && node scripts/download-amazon-images.mjs 41 && node scripts/download-kavsi-images.mjs"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",

@@ -28,9 +28,6 @@ export function Footer() {
               {site.name}
             </div>
             <p className="mt-3 text-sm text-cream/80">{site.tagline}</p>
-            <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-xs">
-              🇰🇪 Proudly Kenyan
-            </div>
           </div>
 
           <div>
