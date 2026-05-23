@@ -20,13 +20,13 @@ export function bearMeta(index: number) {
   return entries.find(e => e.index === index);
 }
 
-/** Hero carousel — five distinct bears from the catalog. */
+/** Hero carousel — darker backgrounds so cream hero copy stays readable. */
 export const heroSlides = [
-  { src: bearImage(41), alt: "Dean's Andrew limited edition mohair teddy", caption: "Collector edition" },
-  { src: bearImage(5), alt: "Life-sized giant teddy bear", caption: "Giant hugs delivered" },
-  { src: bearImage(45), alt: "Steiff Paddy golden brown teddy", caption: "Steiff classics" },
-  { src: bearImage(1), alt: "Pink everyday joy teddy bear", caption: "Pocket-sized love" },
-  { src: bearImage(47), alt: "Steiff Fynn teddy in suitcase", caption: "Gift-ready" },
+  { src: bearImage(29), alt: "Golden teddy bear in a warm workshop display", caption: "Handcrafted classics" },
+  { src: bearImage(67), alt: "Two giant teddy bears on a dark backdrop", caption: "Giant hugs delivered" },
+  { src: bearImage(60), alt: "Colourful teddy bears against a deep purple wall", caption: "Every colour of love" },
+  { src: bearImage(51), alt: "Polar bear plush on a black studio background", caption: "Collector edition" },
+  { src: bearImage(79), alt: "Teddy bear on dark wood shelves", caption: "Gift-ready" },
 ] as const;
 
 export { entries as imageManifest };

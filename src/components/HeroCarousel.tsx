@@ -69,7 +69,10 @@ export function HeroCarousel({ className, variant = "card" }: HeroCarouselProps)
                   <div className="absolute inset-0 bg-gradient-to-t from-cocoa/50 via-transparent to-transparent" />
                 )}
                 {isBackground && (
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10 pointer-events-none" />
+                    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                  </>
                 )}
                 {!isBackground && (
                   <p className="absolute bottom-5 left-5 right-5 text-cream font-display text-lg font-semibold drop-shadow-sm">
