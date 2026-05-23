@@ -139,4 +139,24 @@
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  .hero-rise {
+    animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero-rise-delay-1 { animation-delay: 0.08s; }
+  .hero-rise-delay-2 { animation-delay: 0.18s; }
+  .hero-rise-delay-3 { animation-delay: 0.32s; }
+  .hero-rise-delay-4 { animation-delay: 0.46s; }
+  .hero-rise-delay-5 { animation-delay: 0.58s; }
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-hugs {
+    animation: hero-hugs 2.8s ease-in-out infinite;
+  }
+  @keyframes hero-hugs {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.04); }
+  }
 }

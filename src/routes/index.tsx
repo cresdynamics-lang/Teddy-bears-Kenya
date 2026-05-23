@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { HeroContent } from "@/components/HeroContent";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { Reviews } from "@/components/Reviews";
 import { Newsletter } from "@/components/Newsletter";
@@ -11,7 +11,7 @@ import {
   productsByCategory,
 } from "@/lib/products";
 import { bearImage } from "@/lib/images";
-import { ArrowRight, Truck, ShieldCheck, Heart, Gift, Star } from "lucide-react";
+import { ArrowRight, Truck, ShieldCheck, Gift, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,47 +38,10 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 gradient-hero" aria-hidden />
-        <div className="absolute inset-0 bg-paw opacity-40" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <div className="order-2 lg:order-1">
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance">
-              Send <span className="text-primary">hugs</span>
-              <br />
-              today.
-            </h1>
-            <p className="mt-5 text-lg text-foreground/70 max-w-md">
-              Handpicked, irresistibly soft teddy bears delivered the same day across Nairobi. From pocket-sized cuties to life-size giants.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/shop">
-                <Button size="lg" className="rounded-full bg-cocoa text-cream hover:bg-cocoa/90 h-12 px-7">
-                  Shop all bears <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="/shop" search={{ category: "Gift Sets" }}>
-                <Button size="lg" variant="outline" className="rounded-full h-12 px-7 border-cocoa/20 bg-background/70">
-                  Gift sets
-                </Button>
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-foreground/70">
-              <span className="flex items-center gap-1.5">
-                <Truck className="w-4 h-4 text-primary" /> Same-day Nairobi
-              </span>
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-primary" /> M-Pesa & COD
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Heart className="w-4 h-4 text-primary fill-current" /> 100% Cuddly
-              </span>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <HeroCarousel />
-          </div>
+      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-end sm:items-center overflow-hidden">
+        <HeroCarousel variant="background" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-24 w-full">
+          <HeroContent />
         </div>
       </section>
 

@@ -39,9 +39,9 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <img
-          src={bearImage(4)}
-          alt="Two teddies on a windowsill"
-          className="rounded-[2.5rem] aspect-[4/5] object-cover w-full shadow-soft"
+          src={bearImage(12)}
+          alt="Giant teddy bear from our Nairobi collection"
+          className="rounded-[2.5rem] aspect-[4/5] object-cover object-center w-full shadow-soft"
         />
         <div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-balance">From a Westlands studio to all 47 counties.</h2>

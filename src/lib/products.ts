@@ -29,7 +29,7 @@ type ManifestEntry = {
   featured?: boolean;
 };
 
-/** Friendly labels for Wikimedia-sourced photos (29–40). */
+/** Friendly labels for Wikimedia-sourced photos (29–40, 51–75). */
 const WIKI_PRODUCTS: Record<
   number,
   { name: string; price: number; category: Category; size: Product["size"]; description: string; featured?: boolean }
@@ -46,6 +46,31 @@ const WIKI_PRODUCTS: Record<
   38: { name: "Travel Companion Bear", price: 2500, category: "Medium", size: "Medium", description: "Adventure-ready plush that tags along anywhere." },
   39: { name: "Garden Daydream Bear", price: 2600, category: "Medium", size: "Medium", description: "Soft bear with a dreamy pastel palette — nursery perfect." },
   40: { name: "Holiday Ornament Bear", price: 1800, category: "Gift Sets", size: "Small", description: "Festive mini bear — ideal for Christmas and celebrations." },
+  51: { name: "Classic Brown Plush", price: 2100, category: "Medium", size: "Medium", description: "Timeless brown teddy — soft, neutral, and gift-ready." },
+  52: { name: "Honey Cuddle Bear", price: 1950, category: "Small", size: "Small", description: "Warm honey-toned plush perfect for everyday hugs." },
+  53: { name: "Pastel Nursery Bear", price: 2300, category: "Medium", size: "Medium", description: "Gentle pastel plush ideal for nurseries and baby gifts." },
+  54: { name: "Collector Mohair Classic", price: 4200, category: "Personalized", size: "Medium", description: "Premium mohair-style bear with heirloom quality.", featured: true },
+  55: { name: "Blush Heart Teddy", price: 2400, category: "Gift Sets", size: "Medium", description: "Blush-pink bear for anniversaries and sweet surprises." },
+  56: { name: "Midnight Navy Bear", price: 2200, category: "Medium", size: "Medium", description: "Deep navy plush with a sophisticated, cozy feel." },
+  57: { name: "Cream Snuggle Bear", price: 1850, category: "Small", size: "Small", description: "Ivory-cream teddy — light, soft, and universally loved." },
+  58: { name: "Showroom Giant Plush", price: 9200, category: "Giant", size: "Giant", description: "Oversized display bear that transforms any room." },
+  59: { name: "Museum Miniature Steiff", price: 3100, category: "Personalized", size: "Small", description: "Museum-display miniature Steiff-style bear in pristine condition." },
+  60: { name: "Rose Gift Teddy", price: 2600, category: "Gift Sets", size: "Medium", description: "Romantic rose-accent plush for special occasions.", featured: true },
+  61: { name: "Rothenburg Giant Steiff", price: 2800, category: "Giant", size: "Giant", description: "Large Steiff-style teddy — an impressive showroom centerpiece." },
+  62: { name: "Pink Display Teddy", price: 2100, category: "Medium", size: "Medium", description: "Bright pink plush bear for cheerful gifting." },
+  63: { name: "Shop Window Bear", price: 2000, category: "Medium", size: "Medium", description: "Display-quality teddy from our curated shop selection." },
+  64: { name: "Ribbon Valentine Bear", price: 2400, category: "Gift Sets", size: "Medium", description: "Valentine-ready bear with a personalized ribbon." },
+  65: { name: "Steiff Mourning Classic", price: 3800, category: "Personalized", size: "Medium", description: "Historic Steiff-style bear with heritage stitching." },
+  66: { name: "Twin Plush Set", price: 3200, category: "Gift Sets", size: "Medium", description: "Matching pair of plush bears — double the hugs." },
+  67: { name: "1950s Original Style", price: 3500, category: "Personalized", size: "Medium", description: "Mid-century teddy styling with authentic proportions." },
+  68: { name: "Titanic Memorial Bear", price: 4200, category: "Personalized", size: "Medium", description: "Limited memorial-edition style plush bear.", featured: true },
+  69: { name: "George Collector Bear", price: 3900, category: "Personalized", size: "Medium", description: "Named collector bear with premium mohair feel." },
+  70: { name: "Munich Antique Steiff", price: 4500, category: "Personalized", size: "Medium", description: "Antique-style Steiff bear from European tradition." },
+  71: { name: "Heritage Jointed Bear", price: 4100, category: "Personalized", size: "Medium", description: "Jointed limbs and glass-style eyes — display worthy." },
+  72: { name: "Vintage Golden Mohair", price: 4300, category: "Personalized", size: "Medium", description: "Golden mohair-tone bear with vintage character." },
+  73: { name: "Classic Amber Bear", price: 4000, category: "Personalized", size: "Medium", description: "Warm amber plush with heirloom presentation." },
+  74: { name: "Mini Steiff Style", price: 2200, category: "Small", size: "Small", description: "Miniature teddy with signature Steiff craftsmanship." },
+  75: { name: "Basket Cuddle Duo", price: 2900, category: "Gift Sets", size: "Medium", description: "Two bears nestled in a gift basket — ready to surprise." },
 };
 
 function cleanName(name: string) {
@@ -105,7 +130,9 @@ function buildFromManifest(entry: ManifestEntry): Product {
         ? `${entry.description ?? name} Premium collector plush — Nairobi delivery available.`
         : entry.source === "kavsi.co.ke"
           ? entry.description ?? `${name} — adorable plush teddy, delivered with love in Nairobi.`
-          : `Soft, cuddly, and gift-ready. ${name} — delivered with love across Kenya.`;
+          : entry.source === "kilimall.co.ke"
+            ? `${name} — popular plush pick on Kilimall, delivered across Kenya.`
+            : `Soft, cuddly, and gift-ready. ${name} — delivered with love across Kenya.`;
 
   return {
     id: entry.slug ?? `bear-${entry.index}`,

@@ -10,10 +10,12 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "fetch-images": "node scripts/download-teddy-images.mjs",
+    "fetch-images": "node scripts/download-teddy-images.mjs 20 auto",
+    "fetch-more-images": "node scripts/download-teddy-images.mjs 25 auto",
     "fetch-haven-images": "node scripts/download-haven-images.mjs",
     "fetch-amazon-images": "node scripts/download-amazon-images.mjs 41",
     "fetch-kavsi-images": "node scripts/download-kavsi-images.mjs",
+    "fetch-kilimall-images": "node scripts/download-kilimall-images.mjs",
     "fetch-all-images": "node scripts/download-haven-images.mjs && node scripts/download-teddy-images.mjs 12 29 && node scripts/download-amazon-images.mjs 41 && node scripts/download-kavsi-images.mjs"
   },
   "dependencies": {
